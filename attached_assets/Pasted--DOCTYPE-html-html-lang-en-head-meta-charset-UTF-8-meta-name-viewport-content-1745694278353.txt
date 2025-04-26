@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindHaven - Your Mental Health Journey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            background-color: #f1f9fc;
+            color: #333;
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Container for centralized content */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #66b3b7;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin: 0;
+            font-family: 'Nunito', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 10px;
+            background-color: #48a9a6;
+            margin: 0;
+            border-radius: 8px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 20px;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #ff6f61;
+        }
+
+        /* Main Content Section */
+        .main-content {
+            background-color: #ffffff;
+            padding: 60px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e5574b;
+        }
+
+        /* Affirmation Bubble */
+        #affirmation {
+            display: inline-block;
+            font-size: 2em;
+            font-weight: bold;
+            color: #ff6f61;
+            padding: 15px 30px;
+            border-radius: 30px;
+            background-color: #f9e2e1;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #66b3b7;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                padding: 30px 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+            }
+
+            .container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>MindHaven</h1>
+        <p>Your mental health journey starts here.</p>
+        <nav>
+            <ul>
+                <li><a href="#mood-tracker">Mood Tracker</a></li>
+                <li><a href="#journal">Journal</a></li>
+                <li><a href="#affirmation">Daily Affirmation</a></li>
+                <li><a href="#coping-strategies">Coping Strategies</a></li>
+                <li><a href="#chatbot">Chatbot</a></li>
+                <li><a href="#sos">SOS Help</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section id="mood-tracker" class="main-content">
+    <div class="container">
+        <h2>Mood Tracker</h2>
+        <div class="mood-options">
+            <button id="happy-btn">Happy</button>
+            <button id="sad-btn">Sad</button>
+            <button id="stressed-btn">Stressed</button>
+        </div>
+
+        <div id="mood-cloud">
+            <p>Your current mood: <span id="mood-display">None</span></p>
+        </div>
+
+        <button id="start-camera">Start Camera</button>
+    </div>
+</section>
+
+<section id="journal" class="main-content">
+    <div class="container">
+        <h2>Journal</h2>
+        <textarea id="journal-entry" placeholder="Write your thoughts here..."></textarea>
+        <button id="save-journal">Save Journal Entry</button>
+        <div id="saved-journals">
+            <h3>Your Saved Journals:</h3>
+            <ul id="journal-list"></ul>
+        </div>
+    </div>
+</section>
+
+<section id="affirmation" class="main-content">
+    <div class="container">
+        <h2>Today's Affirmation</h2>
+        <div id="affirmation" class="bubble">Loading...</div>
+        <button id="next-affirmation">Next Affirmation</button>
+    </div>
+</section>
+
+<section id="coping-strategies" class="main-content">
+    <div class="container">
+        <h2>Coping Strategies</h2>
+        <ul>
+            <li><a href="https://www.headspace.com/meditation" target="_blank">Breathing Exercises</a></li>
+            <li><a href="https://www.calms.com/" target="_blank">Mindfulness</a></li>
+            <li><a href="https://www.mentalhealth.gov/" target="_blank">Mental Health Tips</a></li>
+        </ul>
+    </div>
+</section>
+
+<section id="chatbot" class="main-content">
+    <div class="container">
+        <h2>MindBuddy Chatbot</h2>
+        <p>Coming Soon! A chatbot designed to guide you through emotional challenges.</p>
+    </div>
+</section>
+
+<section id="sos" class="main-content">
+    <div class="container">
+        <h2>Emergency Help</h2>
+        <button><a href="https://www.samhsa.gov/find-help/national-helpline" target="_blank" style="color: white;">Get Crisis Help Now</a></button>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 MindHaven. All rights reserved.</p>
+</footer>
+
+<script>
+    // Mood Tracker Script
+    document.getElementById('happy-btn').addEventListener('click', function() {
+        localStorage.setItem('mood', 'Happy');
+        document.getElementById('mood-display').textContent = 'Happy';
+    });
+
+    document.getElementById('sad-btn').addEventListener('click', function() {
+        localStorage.setItem('mood', 'Sad');
+        document.getElementById('mood-display').textContent = 'Sad';
+    });
+
+    document.getElementById('stressed-btn').addEventListener('click', function() {
+        localStorage.setItem('mood', 'Stressed');
+        document.getElementById('mood-display').textContent = 'Stressed';
+    });
+
+    document.getElementById('mood-display').textContent = localStorage.getItem('mood') || 'None';
+
+    // Journal Script
+    document.getElementById('save-journal').addEventListener('click', function() {
+        let journalEntry = document.getElementById('journal-entry').value;
+        if (journalEntry.trim()) {
+            let timestamp = new Date().toLocaleString();
+            let journalList = document.getElementById('journal-list');
+            let listItem = document.createElement('li');
+            listItem.textContent = `${timestamp}: ${journalEntry}`;
+            journalList.appendChild(listItem);
+            localStorage.setItem('journals', JSON.stringify(journalList.innerHTML));
+        }
+    });
+
+    window.onload = function() {
+        if (localStorage.getItem('journals')) {
+            document.getElementById('journal-list').innerHTML = localStorage.getItem('journals');
+        }
+    };
+
+    // Affirmation Script
+    const affirmations = [
+        "Believe in yourself!",
+        "You are stronger than you think.",
+        "Take it one step at a time.",
+        "You are enough just as you are.",
+        "Don't forget to breathe.",
+    ];
+
+    document.getElementById('affirmation').textContent = affirmations[Math.floor(Math.random() * affirmations.length)];
+
+    document.getElementById('next-affirmation').addEventListener('click', function() {
+        document.getElementById('affirmation').textContent = affirmations[Math.floor(Math.random() * affirmations.length)];
+    });
+</script>
+
+</body>
+</html>
